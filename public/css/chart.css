@@ -1,0 +1,28 @@
+html, body {
+    background: linear-gradient(360deg, rgb(56, 143, 141) 0%, rgb(18, 104, 196) 100%);
+    background-size: cover;
+}
+
+.container {
+    width: 60% !important;
+}
+
+.space {
+    margin-top: 8%;
+    margin-bottom: 2%;
+    color: white
+}
+
+@media only screen and (max-width: 900px) {
+    h2 {
+        font-size: 1.2em;
+    }
+}
+
+::-moz-selection {
+    background-color: transparent;
+}
+
+::selection {
+    background-color: transparent;
+}

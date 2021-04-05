@@ -1,0 +1,28 @@
+{
+  "PORT": 0,
+  "USE_SSL": false,
+  "DB": {
+    "IP": "",
+    "PORT": 0,
+    "USER": "",
+    "PWD": "",
+    "DATABASE": ""
+  },
+  "GOOGLE": {
+    "CLIENTID": "",
+    "GSUITE_DOMAIN": ""
+  },
+  "SECRET": "",
+  "DEPLOY_PATH": "/path/to/SitoEdCivica-Questionario/public",
+  "STATS_UPDATE_INTERVAL": 0,
+  "QUESTIONS": [
+    {
+      "title": "Title",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  ]
+}

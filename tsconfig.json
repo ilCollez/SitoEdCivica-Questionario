@@ -1,12 +1,13 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
     "outDir": "build",
     "allowJs": true,
-    "module": "commonjs",
-    "target": "es2020",
+    "module": "CommonJS",
+    "target": "ES2020",
     "sourceMap": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "resolveJsonModule": true
   },
   "include": ["src"],
   "exclude": ["node_modules"]

@@ -15,6 +15,11 @@
   "SECRET": "",
   "DEPLOY_PATH": "/path/to/SitoEdCivica-Questionario/public",
   "STATS_UPDATE_INTERVAL": 0,
+  "DOMAIN": "exampledomain.it",
+  "PRIV_KEY": "path/to/privkey.pem",
+  "CERT": "path/to/cert.pem",
+  "CHAIN": "path/to/fullchain.pem",
+  "DH_PARAM": "path/to/dh-strong.pem",
   "QUESTIONS": [
     {
       "title": "Title",

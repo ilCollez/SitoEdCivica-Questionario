@@ -36,7 +36,6 @@ router.get("/login", async (req, res) => {
         idToken: req.query.idToken as string,
         audience: `${config.GOOGLE.CLIENTID}.apps.googleusercontent.com`
     }).catch(() => {
-        console.log(`Attempted login with ${req.query.idToken}`);
         res.sendStatus(400);
 
         return null;
@@ -52,7 +51,6 @@ router.get("/login", async (req, res) => {
         res.redirect("/sondaggio");
 
         console.log(`user has successfully logged in`);
-        console.log(payload);
     } else {
         req.session["isStudent"] = false;
 
@@ -63,8 +61,8 @@ router.get("/login", async (req, res) => {
 });
 
 router.get("/sondaggio", async (req, res) => {
-    console.log(JSON.stringify(req.session, null, 3));
-
+    res.setHeader("Expires", new Date(Date.now() + 1).toUTCString());
+    
     if (!req.session["loginAttempt"]) {
         res.redirect("/");
         return;

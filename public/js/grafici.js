@@ -1,5 +1,7 @@
 let charts = document.querySelectorAll(".resultChart");
 
+window.onload = window.location.reload;
+
 for (let i of charts) {
     let data = JSON.parse(i.dataset.answers);
 
@@ -32,7 +34,7 @@ for (let i of charts) {
                     ticks: {
                         beginAtZero: true,
                         fontColor: '#fff',
-                        fontSize: 20,
+                        fontSize: 15,
                         padding: 5
                     },
                     gridLines: {
@@ -42,7 +44,7 @@ for (let i of charts) {
                 xAxes: [{
                     ticks: {
                         fontColor: '#fff',
-                        fontSize: 20
+                        fontSize: 15
                     },
                     gridLines: {
                         color: 'rgba(255, 255, 255, 0.7)'
@@ -52,7 +54,7 @@ for (let i of charts) {
             legend: {
                 display: false
             },
-            responsive: true
+	    responsive: true
         }
     });
 }

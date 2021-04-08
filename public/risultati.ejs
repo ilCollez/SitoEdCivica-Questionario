@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/chart.css">
+    
     <link rel="icon" href="./img/logo.png">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
             crossorigin="anonymous"></script>
@@ -21,24 +24,22 @@
             crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
-    <script src="./js/login.js"></script>
     <title>Risultati</title>
 </head>
 <body>
-<button type="button" class="btn btn-lg btm-warning pull-right" onclick="window.location.href = 'localhost:9095'" style="margin-top: 2%; margin-left: 2%">Torna alla Home</button>
+<button type="button" class="btn btn-lg pull-right" id="backHome" onclick="window.location.href = 'https://sondaggioitisriva.tk'">Torna alla Home</button>
+
+<h1>Grazie! Il tuo sondaggio sarà elaborato entro 5 minuti</h1>
 
 <div class="container">
     <% domande.forEach(domanda => { %>
-        <h2 class="text-xl-center space"><%= domanda.question %></h2>
-
-        <canvas class="resultChart" data-answers="<%= JSON.stringify(domanda.ansDict)%>"></canvas>
-    <% });%>
+    	<div class="chartContainer">
+        	<h2 class="text-xl"><%= domanda.question %></h2>
+        	<canvas class="resultChart" data-answers="<%= JSON.stringify(domanda.ansDict)%>"></canvas>
+	</div>
+<% });%>
 </div>
 
-<footer>
-    <h3>Il tuo sondaggio sarà elaborato nei prossimi 5 minuti</h3>
-</footer>
 <script src="./js/grafici.js"></script>
-
 </body>
 </html>

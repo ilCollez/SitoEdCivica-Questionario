@@ -5,7 +5,7 @@
   "main": "build/main.js",
   "scripts": {
     "prestart": "tsc -p .",
-    "start": "node build/main.js"
+    "start": "sudo node build/main.js"
   },
   "repository": {
     "type": "git",

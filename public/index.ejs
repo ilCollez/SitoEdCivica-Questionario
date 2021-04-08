@@ -22,7 +22,7 @@
             integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
             crossorigin="anonymous"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="./js/login.js"></script>
     <title>Sondaggio</title>
 </head>
@@ -77,8 +77,8 @@
                 data-height="45" data-longtitle="true">Loggati per iniziare</div>
 
             <br>
-            <button class="inviaBtn" id="doPollBtn" style="display: none">Fai il sondaggio</button>
-            <button class="inviaBtn" id="signOutBtn" onclick="signOut()" style="display: none">Sign Out</button>
+            <button class="inviaBtn" id="doPollBtn" style="display: none; z-index: 10000000000">Fai il sondaggio</button>
+            <button class="inviaBtn" id="signOutBtn" onclick="signOut()" style="display: none; z-index: 10000000000">Sign Out</button>
 
 
         </div>

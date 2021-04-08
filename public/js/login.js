@@ -12,7 +12,7 @@ function showButtons(bool, idToken) {
     signOutBtn.style.display = bool ? "block" : "none";
 
     signOutBtn.onclick = signOut;
-    poolBtn.onclick = () => window.location.href = `http://130.25.193.20:9095/login?idToken=${idToken}`;
+    poolBtn.onclick = () => window.location.href = `https://sondaggioitisriva.tk/login?idToken=${idToken}`;
 }
 
 function signOut() { 

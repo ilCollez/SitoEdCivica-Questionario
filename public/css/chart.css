@@ -3,20 +3,32 @@ html, body {
     background-size: cover;
 }
 
-.container {
-    width: 60% !important;
+h1, h2 {
+    color: white;
+    text-align: center;
 }
 
-.space {
-    margin-top: 8%;
-    margin-bottom: 2%;
-    color: white
+h1 {
+    margin-bottom: 5%;
 }
 
+canvas {
+    margin-bottom: 7.5%;
+}
+
+/* Mobile Phones */
 @media only screen and (max-width: 900px) {
     h2 {
         font-size: 1.2em;
     }
+}
+
+/* Laptops and Desktops */
+@media (min-width:1025px) {
+    canvas {
+        max-width: 80%;
+	max-height: auto;
+    }	
 }
 
 ::-moz-selection {
@@ -25,4 +37,17 @@ html, body {
 
 ::selection {
     background-color: transparent;
+}
+
+.chartContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#backHome {
+    margin-top: 2%;
+    margin-left 2%;
+    margin-bottom: 5%;
 }

@@ -39,8 +39,6 @@ export default class ExpressServer {
     }
 
     async start() {
-        this._app.use(`/`, mainRouter);
-
 	this.httpServer = createHttpServer(this._app);
         this.httpServer.listen(config.PORT, () => console.log(`HTTP Server listening on ${config.PORT}`));
 
@@ -60,5 +58,7 @@ export default class ExpressServer {
 
 	    this.httpsServer.listen(443, () => console.log(`HTTPS Server listening on 443`));
 	}
+
+	this._app.use("/", mainRouter);
     }
 }

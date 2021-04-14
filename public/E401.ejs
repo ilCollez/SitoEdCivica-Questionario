@@ -87,6 +87,8 @@
 <script src="./js/404.js"></script>
 <script>
     window.onload = () => {
+	if(history.replaceState)
+	    history.replaceState({}, "", "/login");
         setTimeout(() => {
             let auth2 = gapi.auth2.getAuthInstance();
             if (auth2)

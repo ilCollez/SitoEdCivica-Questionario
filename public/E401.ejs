@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/E404.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./img/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4b9ba14b0f.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
             crossorigin="anonymous"></script>
@@ -25,19 +27,72 @@
     <title>401</title>
 </head>
 
-<body>
-    <p>HTTP: <span>401</span></p>
-    <code><span>access</span>.<em>denied</em> = true;</code>
-    <h3 class="text-xl-center">Non puoi fare il sondaggio con questo account</h3>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="./js/404.js"></script>
+<body style="overflow: hidden">
+<div class="arrow arrow--top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="270.11" height="649.9" overflow="visible">
+        <style>
+            .geo-arrow {
+                fill: none;
+                stroke: #fff;
+                stroke-width: 2;
+                stroke-miterlimit: 10
+            }
+        </style>
+        <g class="item-to bounce-1">
+            <path class="geo-arrow draw-in" d="M135.06 142.564L267.995 275.5 135.06 408.434 2.125 275.499z"/>
+        </g>
+        <circle class="geo-arrow item-to bounce-2" cx="194.65" cy="69.54" r="7.96"/>
+        <circle class="geo-arrow draw-in" cx="194.65" cy="39.5" r="7.96"/>
+        <circle class="geo-arrow item-to bounce-3" cx="194.65" cy="9.46" r="7.96"/>
+        <g class="geo-arrow item-to bounce-2">
+            <path class="st0 draw-in" d="M181.21 619.5l13.27 27 13.27-27zM194.48 644.5v-552"/>
+        </g>
+    </svg>
+</div>
+<div class="arrow arrow--bottom">
+    <svg xmlns="http://www.w3.org/2000/svg" width="31.35" height="649.9" overflow="visible">
+        <style>
+            .geo-arrow {
+                fill: none;
+                stroke: #fff;
+                stroke-width: 2;
+                stroke-miterlimit: 10
+            }
+        </style>
+        <g class="item-to bounce-1">
+            <circle class="geo-arrow item-to bounce-3" cx="15.5" cy="580.36" r="7.96"/>
+            <circle class="geo-arrow draw-in" cx="15.5" cy="610.4" r="7.96"/>
+            <circle class="geo-arrow item-to bounce-2" cx="15.5" cy="640.44" r="7.96"/>
+            <g class="item-to bounce-2">
+                <path class="geo-arrow draw-in" d="M28.94 30.4l-13.26-27-13.27 27zM15.68 5.4v552"/>
+            </g>
+        </g>
+    </svg>
+</div>
+<div class="main">
+    <div data-aos="fade-up" data-aos-anchor-placement="top-center" style="height: 90vh">
+        <h2 class="titolo">Non puoi fare il sondaggio con questo account!</h2>
+        <h4 class="titolo">Il sondaggio puoi farlo solo con un account appartenente a ITIS "Riva"</h4>
+    </div>
 
-    <script>
-        window.onload = () => {
+    <div class="main__text-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" class="dotted-circle" width="352" height="352" overflow="visible">
+            <circle cx="176" cy="176" r="174" fill="none" stroke="#fff" stroke-width="2" stroke-miterlimit="10"
+                    stroke-dasharray="12.921,11.9271"/>
+        </svg>
+    </div>
+</div>
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="./js/404.js"></script>
+<script>
+    window.onload = () => {
+        setTimeout(() => {
             let auth2 = gapi.auth2.getAuthInstance();
             if (auth2)
                 auth2.signOut().then(() => console.log('Te ne vai già ???? :('));
-        }
-    </script>
+        }, 1000);
+    }
+</script>
 </body>
 </html>

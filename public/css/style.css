@@ -9,6 +9,8 @@
     margin-bottom: 10px;
     color: white;
     font-family: "custom1";
+    position: relative;
+    z-index: 2;
 }
 
 .container {
